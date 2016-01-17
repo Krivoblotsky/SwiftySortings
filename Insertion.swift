@@ -20,15 +20,17 @@ class Insertion: Sort
         //Loop throug elemts
         for i in 1...array.count - 1
         {
+            //Get the element
             let element = array[i]
             
             //Move to the left
             for var j = i; j > -1 ;j--
             {
-                let elementToTest = array[j]
+                //Get the
+                let pair = array[j]
                 
                 //Exchange elements with good order
-                if element < elementToTest
+                if element < pair
                 {
                     array.removeAtIndex(j + 1)
                     array.insert(element, atIndex: j)
