@@ -7,7 +7,9 @@ Sort algorithms written in Swift.
 
 ###Insertion
 Visualization:
+
 ![Insertion](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
+
 Implementation:
 ```swift
   //Loop throug elemts
