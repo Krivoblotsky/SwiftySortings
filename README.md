@@ -1,23 +1,14 @@
 # SwiftySortings
 Sort algorithms written in Swift. 
 
-1. [Insertion](###Insertion)
-2. Selection
-3. Bubble
+1. [Insertion Sort](###Insertion)
+2. Selection Sort
+3. Bubble Sort
 
 ###Insertion
 Visualization:
-
-
-
 ![Insertion](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
-
-
-
-
 Implementation:
-
-
 ```swift
   //Loop throug elemts
   for i in 1...array.count - 1
