@@ -13,10 +13,13 @@ class Shell: Sort
     static func sort<T : Comparable>(var array: Array<T>) -> Array<T> {
         let length = array.count
 
+        // Get step size
         var h = getStep(0)
         
+        // Start decreasing step
         while (h >= 1)
         {
+            // Sort chunks
             for i in h...length - 1
             {
                 for (var j = i; j >= h && (array[j] < array[j-h]); j -= h)
@@ -27,12 +30,22 @@ class Shell: Sort
                 }
             }
             
+            // Get next step
             h = getStep(h)
         }
         
         return array
     }
     
+    /**
+     Calculates step size for a given sequence length.
+     Uses `3x + 1` formula for step increment calculation which leads to O(N^3/2) compares in worst case.
+     
+     - parameter currentStep: Int pass 0 to get starting step for sequence
+     - parameter length:      Int sequence length
+     
+     - returns: Int step size
+     */
     private static func getStep(currentStep: Int, length: Int = 0) -> Int {
         if currentStep == 0 {
             var step: Int = 1
