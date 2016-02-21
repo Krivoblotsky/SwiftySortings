@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E61E01E1C79BB7E002B533F /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61E01D1C79BB7E002B533F /* Shell.swift */; };
 		A7C183541C4C3368007266CA /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C183501C4C3368007266CA /* Bubble.swift */; };
 		A7C183551C4C3368007266CA /* Insertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C183511C4C3368007266CA /* Insertion.swift */; };
 		A7C183561C4C3368007266CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C183521C4C3368007266CA /* main.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E61E01D1C79BB7E002B533F /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		A7C1833C1C4C28A1007266CA /* Sortings */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sortings; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C183501C4C3368007266CA /* Bubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		A7C183511C4C3368007266CA /* Insertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insertion.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				A7C183511C4C3368007266CA /* Insertion.swift */,
 				A7C183501C4C3368007266CA /* Bubble.swift */,
 				A7C183581C4C49A6007266CA /* Selection.swift */,
+				0E61E01D1C79BB7E002B533F /* Shell.swift */,
 				A7C1833D1C4C28A1007266CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E61E01E1C79BB7E002B533F /* Shell.swift in Sources */,
 				A7C183541C4C3368007266CA /* Bubble.swift in Sources */,
 				A7C183591C4C49A6007266CA /* Selection.swift in Sources */,
 				A7C183571C4C3368007266CA /* Sort.swift in Sources */,
