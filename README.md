@@ -4,7 +4,8 @@ Sorting algorithms written in Swift.
 1. [Insertion Sort](###Insertion Sort)
 2. [Selection Sort](###Selection Sort)
 3. [Bubble Sort](###Bubble Sort)
-4. More to come...
+4. [Shell Sort](###Shell Sort)
+5. More to come...
 
 ###Insertion Sort
 Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
@@ -111,3 +112,50 @@ static func sort<T : Comparable>(var array: Array<T>) -> Array<T>
 
 ```
 
+###Shell sort
+Shellsort is a generalization of insertion sort that allows the exchange of items that are far apart. The idea is to arrange the list of elements so that, starting anywhere, considering every hth element gives a sorted list. Such a list is said to be h-sorted. Equivalently, it can be thought of as h interleaved lists, each individually sorted. Beginning with large values of h, this rearrangement allows elements to move long distances in the original list, reducing large amounts of disorder quickly, and leaving less work for smaller h-sort steps to do. If the file is then k-sorted for some smaller integer k, then the file remains h-sorted. Following this idea for a decreasing sequence of h values ending in 1 is guaranteed to leave a sorted list in the end.
+
+Visualization:
+
+![Shell](https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif)
+
+Implementation:
+```swift
+static func sort<T : Comparable>(var array: Array<T>) -> Array<T> {
+        let length = array.count
+
+        var h = getStep(0)
+        
+        while (h >= 1)
+        {
+            for i in h...length - 1
+            {
+                for (var j = i; j >= h && (array[j] < array[j-h]); j -= h)
+                {
+                    let tmp = array[j]
+                    array[j] = array[j - h]
+                    array[j - h] = tmp
+                }
+            }
+            
+            h = getStep(h)
+        }
+        
+        return array
+    }
+    
+    private static func getStep(currentStep: Int, length: Int = 0) -> Int {
+        if currentStep == 0 {
+            var step: Int = 1
+            while (step < (length / 3)) {
+                step = 3 * step + 1
+            }
+            
+            return step
+        }
+        
+        return currentStep / 3
+    }
+
+
+```
